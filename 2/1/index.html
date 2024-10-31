@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="public/css/index.css">
   <script src="public/js/index.js" defer></script>
-  <title>Billionaires Clones::Profile</title>
+  <title>Бизнесмены</title>
 </head>
 
 <body>
   <header class="container--full">
-    <h1 class="logotype">Billionaires Clones</h1>
+    <h1 class="logotype">Бизнесмены</h1>
     <button class="burger__button" onclick="triggerBurger(event)">
       <img src="public/images/icons/menu.svg" alt="icon">
     </button>
@@ -23,17 +23,17 @@
         <ul class="burger__nav-list">
           <li>
             <a href="#">
-              Main page
+              Главная 
             </a>
           </li>
           <li>
             <a href="#">
-              Explore
+              Изучить
             </a>
           </li>
           <li>
             <a href="#">
-              Search
+              Поиск
             </a>
           </li>
         </ul>
@@ -42,24 +42,24 @@
 
     <section class="profile">
       <div class="container profile__content">
-        <h1>Profile</h1>
+        <h1>Профиль</h1>
         <div class="profile__item">
           <div class="profile__info">
             <div class="avatar">
               <img class="avatar__inner"
-                src="https://cdn.forbes.ru/files/forbes_import/sn/snimok-ekrana-2016-04-13-v-18.23.36.jpg" alt="avatar">
+                src="https://i.pinimg.com/originals/07/4f/76/074f76f26569aa3d4b27e5db0ab07a47.png" alt="avatar">
             </div>
             <div>
-              <p>Pavel Durov</p>
-              <p>40 y.o.</p>
+              <p>Геннадий Петрович</p>
+              <p>25 y.o.</p>
             </div>
           </div>
         </div>
         <div class="profile__item danger-zone">
-          <h2>Danger zone</h2>
+          <h2>Лучше не стоит</h2>
           <button class="danger" onclick="openModal()">
             <img src="public/images/icons/delete_forever.svg" alt="icon">
-            <span>Delete profile</span>
+            <span>Удалить профиль..</span>
           </button>
         </div>
       </div>
@@ -69,10 +69,10 @@
   <div id="myModal" class="modal">
     <div class="modal__content">
       <span class="modal__close" onclick="closeModal()">&#x2715;</span>
-      <h3>Delete account forever?</h3>
+      <h3>Точно хотите удалить?</h3>
       <div class="modal__buttons">
-        <button onclick="closeModal()">Cancel</button>
-        <button class="danger outline" onclick="deleteUser(event, '5', 'e#J$#IFE3u423ef')">Delete</button>
+        <button onclick="closeModal()">Отмена</button>
+        <button class="danger outline" onclick="deleteUser(event, '5', 'e#J$#IFE3u423ef')">Удалить</button>
       </div>
     </div>
   </div>
