@@ -6,6 +6,8 @@
     --main-brown: #887569;
     --main-black: rgba(0, 0, 0, 0.5);
 
+    --header-height: 4rem;
+
 }
 
 * {
@@ -21,6 +23,7 @@ html {
 }
 
 body {
+    position: relative;
     background-color: var(--main-white);
     font-family: 'Montserrat', sans-serif;
     transition: all 0.3s ease-in-out;
@@ -51,27 +54,30 @@ img{
 }
 
 .container {
+    width: 100%;
     max-width: 1800px;
     margin: 0 auto;
 }
 
 /*header*/
-.header-wrapper{
-    position: fixed;
+header {
+    background: rebeccapurple;
     top: 0;
-    bottom: 90%;
     left: 0;
-    right: 0;
     width: 100%;
 
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    text-align: center;
 
-
-    padding: 0 30px;
+    position: fixed;
+    z-index: 1000;
+    height: var(--header-height);
+    padding-inline: 30px;
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-nav{
@@ -119,6 +125,20 @@ img{
 .header-icons img {
     cursor: pointer;
     
+}
+
+.burger {
+    position: fixed;
+    width: 100%;
+    top: var(--header-height);
+    background: #e8e8e8;
+    height: 100%;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: 0.3s ease-out;
+}
+.burger.open {
+    transform: translateX(0);
 }
 
 .header-burger{
@@ -336,8 +356,8 @@ img{
   justify-content: center;
   gap: .5rem;
   border-radius: .5rem;
-  background: #1454b5;
-  border: 1px solid #1454b5;
+  background: #eee;
+  border: 1px solid #eee;
   padding: .5rem 1rem;
   font-size: 1rem;
   transition: .3s ease-in;
@@ -355,8 +375,8 @@ button p,
 
 button:hover,
 .button:hover {
-  background: #0963eb;
-  border: 1px solid #0963eb;
+  background: #7e7e7e;
+  border: 1px solid #7e7e7e;
 }
 
 button:disabled,

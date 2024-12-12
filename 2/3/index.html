@@ -31,9 +31,10 @@
           </ul>
         </div>
     </div>
+
     <header>
 
-        <div class="header-wrapper contaner">
+        <div class="header-wrapper container">
 
             <nav class="header-nav">
                 <a href="#">Новинки</a>
@@ -58,9 +59,9 @@
                 </div>
             </div>
 
-            <div class="header-burger">
-                <img src="./assets/img/icons/burger.svg" alt="burger">
-            </div>
+            <button onclick="triggerBurger(event)">
+                <img src="assets/img/icons/burger.svg" alt="burger">
+            </button>
 
         </div>
 
@@ -380,6 +381,7 @@
     
         function openModal() {
           const modal = document.querySelector('.modal');
+          console.log('dfgdgdfg');
           document.body.style.overflow = 'hidden';
     
           blockCloseButton(10, modal.querySelector('.modal__close_button'));
@@ -393,27 +395,23 @@
     
           modal.classList.remove('open');
         }
-    
         function handleIntersect(entries, observer) {
           entries.forEach((entry) => {
             if (entry.isIntersecting && !localStorage.getItem('modalOpened')) {
               openModal();
             }
     
-            prevRatio = entry.intersectionRatio;
           });
         }
-    
-        let observer;
     
         let options = {
           root: null,
           rootMargin: "0px",
-          threshold: .3,
+          threshold: 0,
         };
     
-        observer = new IntersectionObserver(handleIntersect, options);
-        observer.observe(document.querySelector('.faq'));
+        const observer = new IntersectionObserver(handleIntersect, options);
+        observer.observe(document.querySelector('#newProducts'));
       </script>
     
 

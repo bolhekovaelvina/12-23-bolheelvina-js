@@ -7,7 +7,7 @@ function triggerBurger(event) {
     const image = event.currentTarget.querySelector('img');
   
     if (burger.classList.contains('open')) {
-      image.src = 'assets/img/icons/close (1).svg';
+      image.src = 'assets/img/icons/close.svg';
     } else {
       image.src = 'assets/img/icons/burger.svg';
     }
